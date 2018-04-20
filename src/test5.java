@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class test5 {
 
-    public static void main(String[] args) {     //wa主要原因为输入不规范
+    public static void main(String[] args) {                       //wa主要原因为输入不规范,其次nextLine（）有点小问题
         Scanner sc = new Scanner(System.in);
-        while (sc.hasNext()) {
-            int t=Integer.parseInt(sc.nextLine());
-            int max = 1;
-            String popular=" ";
-            while (t!=0){
+        while (sc.hasNext()) {                                     //，4+Enter，“”会作为save[0]
+            int t=Integer.parseInt(sc.nextLine());                     //即这行使用int t=sc.nextInt();输入方式为3 red
+            int max = 1;                                           //                                      red
+            String popular=" ";                                    //                                      red
+            while (t!=0){                                         //                                与题目不符
                 String save[] = new String[t];
                 for (int i = 0; i < t; i++) {
                     String scan = sc.nextLine();
